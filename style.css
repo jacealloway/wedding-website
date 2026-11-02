@@ -1,0 +1,848 @@
+
+/* =====================================
+   WEDDING WEBSITE
+   EDITABLE COLOUR PALETTE
+===================================== */
+
+:root {
+    --ivory: #faf8f5;
+    --white: #ffffff;
+    --black: #171515;
+    --merlot: #541b2b;
+    --merlot-light: #713747;
+    --champagne: #c6b8a5;
+    --grey: #77716e;
+
+    --heading-font: 'Cormorant Garamond', serif;
+    --script-font: 'Great Vibes', cursive;
+    --body-font: 'Montserrat', sans-serif;
+}
+
+
+/* =====================================
+   GENERAL RESET
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--ivory);
+    color: var(--black);
+    font-family: var(--body-font);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.navigation {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--ivory);
+    border-bottom: 1px solid #e9e3dc;
+}
+
+.nav-logo {
+    font-family: var(--heading-font);
+    font-size: 19px;
+    letter-spacing: 3px;
+    color: var(--merlot);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--merlot);
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 850px;
+    padding: 75px 20px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #ffffff 0%,
+            #faf8f5 70%,
+            #f1ece6 100%
+        );
+}
+
+.invitation-card {
+    width: 100%;
+    max-width: 650px;
+    padding: 17px;
+    background: var(--white);
+    border: 1px solid var(--champagne);
+
+    box-shadow:
+        0 15px 45px rgba(40, 20, 25, 0.07);
+}
+
+.card-border {
+    min-height: 680px;
+    border: 1px solid var(--champagne);
+    outline: 1px solid #eee8e1;
+    outline-offset: -8px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 60px 35px;
+}
+
+.eyebrow {
+    color: var(--merlot);
+    font-size: 9px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.invitation-intro {
+    font-family: var(--heading-font);
+    font-size: 21px;
+    font-style: italic;
+    color: var(--grey);
+    line-height: 1.5;
+}
+
+.couple-names {
+    font-family: var(--script-font);
+    font-size: clamp(65px, 11vw, 105px);
+    font-weight: 400;
+    color: var(--merlot);
+    line-height: 1.3;
+    margin-top: 15px;
+}
+
+.ampersand {
+    display: block;
+    font-family: var(--heading-font);
+    font-size: 35px;
+    font-style: italic;
+    color: var(--champagne);
+    margin: -5px 0;
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.ornament span:not(.ornament-diamond) {
+    height: 1px;
+    width: 65px;
+    background: var(--champagne);
+}
+
+.ornament-diamond {
+    color: var(--merlot);
+    font-size: 12px;
+}
+
+.invitation-message {
+    max-width: 380px;
+    font-family: var(--heading-font);
+    font-size: 19px;
+    line-height: 1.7;
+    color: #615b57;
+    margin-bottom: 35px;
+}
+
+.wedding-date {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 25px;
+}
+
+.date-day,
+.date-time {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--grey);
+}
+
+.date-main {
+    font-family: var(--heading-font);
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--merlot);
+    letter-spacing: 2px;
+}
+
+.venue-name {
+    font-family: var(--heading-font);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.venue-location {
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--grey);
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.primary-button,
+.submit-button {
+    display: inline-block;
+    background: var(--merlot);
+    color: var(--white);
+    border: 1px solid var(--merlot);
+    padding: 14px 35px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover,
+.submit-button:hover {
+    background: transparent;
+    color: var(--merlot);
+}
+
+.card-footer {
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--grey);
+    margin-top: 35px;
+}
+
+.hero-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: var(--grey);
+}
+
+
+/* =====================================
+   DETAILS SECTION
+===================================== */
+
+.details-section {
+    padding: 110px 8%;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-heading {
+    max-width: 550px;
+    margin: 0 auto 65px;
+}
+
+.section-heading h2,
+.celebration-content h2,
+.rsvp-container h2 {
+    font-family: var(--heading-font);
+    font-size: 52px;
+    font-weight: 500;
+    color: var(--merlot);
+    line-height: 1.2;
+}
+
+.section-description {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    color: var(--grey);
+    margin-top: 15px;
+}
+
+.details-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.detail-item {
+    padding: 35px 20px;
+    border-top: 1px solid var(--champagne);
+    border-bottom: 1px solid var(--champagne);
+}
+
+.detail-number {
+    color: var(--champagne);
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.detail-item h3 {
+    font-family: var(--heading-font);
+    font-size: 30px;
+    font-weight: 500;
+    margin: 15px 0;
+    color: var(--merlot);
+}
+
+.detail-time {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.detail-item p:not(.detail-time) {
+    font-family: var(--heading-font);
+    font-size: 18px;
+    color: var(--grey);
+}
+
+.detail-item .detail-location {
+    margin-top: 15px;
+    color: var(--merlot) !important;
+    font-size: 16px !important;
+    font-style: italic;
+}
+
+.detail-item .detail-address {
+    margin-top: 5px;
+    color: var(--grey) !important;
+    font-size: 14px !important;
+}
+
+
+/* =====================================
+   CELEBRATION SECTION
+===================================== */
+
+.celebration-section {
+    padding: 110px 20px;
+    background: var(--merlot);
+    color: var(--white);
+    text-align: center;
+}
+
+.celebration-content {
+    max-width: 550px;
+    margin: auto;
+}
+
+.celebration-content .eyebrow {
+    color: var(--champagne);
+}
+
+.celebration-content h2 {
+    color: var(--white);
+}
+
+.small-ornament {
+    color: var(--champagne);
+    font-size: 30px;
+    margin: 20px;
+}
+
+.celebration-content h3 {
+    font-family: var(--heading-font);
+    font-size: 29px;
+    font-weight: 400;
+}
+
+.celebration-content > p:not(.eyebrow) {
+    font-family: var(--heading-font);
+    font-size: 20px;
+    margin: 15px auto;
+}
+
+.colour-palette {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 35px 0 20px;
+}
+
+.swatch {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.5);
+}
+
+.swatch.ivory {
+    background: var(--ivory);
+}
+
+.swatch.grey {
+    background: var(--grey);
+}
+
+.swatch.black {
+    background: var(--black);
+}
+
+.swatch.merlot {
+    background: #541b2b;
+}
+
+.dress-code-note {
+    font-style: italic;
+}
+
+
+/* =====================================
+   RSVP SECTION
+===================================== */
+
+.rsvp-section {
+    padding: 110px 20px;
+    background: var(--ivory);
+}
+
+.rsvp-container {
+    max-width: 570px;
+    margin: auto;
+    padding: 55px 60px;
+    background: var(--white);
+    border: 1px solid #e8ded5;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.04);
+}
+
+.rsvp-container h2 {
+    text-align: center;
+}
+
+.rsvp-container > .eyebrow {
+    text-align: center;
+}
+
+.rsvp-description {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 19px;
+    color: var(--grey);
+    margin: 20px 0 40px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    color: var(--merlot);
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #d8d0c9;
+    background: transparent;
+    padding: 12px 5px;
+    color: var(--black);
+    outline: none;
+    border-radius: 0;
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-bottom: 2px solid var(--merlot);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.form-group small {
+    font-size: 10px;
+    color: var(--grey);
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+.submit-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--merlot);
+    min-height: 25px;
+}
+
+
+/* =====================================
+   CLOSING SECTION
+===================================== */
+
+.closing-section {
+    padding: 85px 20px;
+    text-align: center;
+    background: var(--white);
+}
+
+.closing-ornament {
+    font-size: 30px;
+    color: var(--champagne);
+}
+
+.closing-script {
+    font-family: var(--script-font);
+    font-size: 55px;
+    color: var(--merlot);
+}
+
+.closing-section h2 {
+    font-family: var(--heading-font);
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--merlot);
+}
+
+.closing-date {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 25px;
+    text-align: center;
+    font-size: 8px;
+    letter-spacing: 2px;
+}
+
+footer p + p {
+    margin-top: 5px;
+    color: var(--champagne);
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 768px) {
+
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .nav-links a {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 45px 15px;
+        min-height: auto;
+    }
+
+    .invitation-card {
+        padding: 10px;
+    }
+
+    .card-border {
+        min-height: 620px;
+        padding: 45px 15px;
+    }
+
+    .couple-names {
+        font-size: clamp(65px, 16vw, 85px);
+    }
+
+    .invitation-message {
+        font-size: 17px;
+    }
+
+    .details-section,
+    .celebration-section,
+    .rsvp-section {
+        padding: 75px 20px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .section-heading h2,
+    .celebration-content h2,
+    .rsvp-container h2 {
+        font-size: 42px;
+    }
+
+    .rsvp-container {
+        padding: 40px 25px;
+    }
+
+    .hero-bottom {
+        font-size: 7px;
+        gap: 8px;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 7px;
+    }
+
+    .card-border {
+        padding: 35px 10px;
+    }
+
+    .date-main {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =====================================
+   ORGANIZER CSV EXPORT BUTTON
+===================================== */
+
+.export-button {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px;
+
+    background: transparent;
+    border: 1px solid var(--champagne);
+
+    color: var(--merlot);
+
+    font-family: var(--body-font);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.export-button:hover {
+    background: var(--merlot);
+    border-color: var(--merlot);
+    color: white;
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* Wedding Photo Gallery */
+
+.photo-gallery-section {
+  text-align: center;
+  padding: 80px 6%;
+}
+
+.gallery-heading {
+  margin-bottom: 45px;
+}
+
+.gallery-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: hsl(343, 18%, 50%);
+}
+
+.gallery-heading h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 52px;
+  font-weight: normal;
+  color: hsl(0, 0%, 100%);
+  margin: 12px 0;
+}
+
+.gallery-heading p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  color: #666;
+}
+
+/* Masonry layout */
+
+.wedding-photo-gallery {
+  columns: 3;
+  column-gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-photo {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border-radius: 4px;
+  break-inside: avoid;
+  position: relative;
+}
+
+.gallery-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-photo:hover img {
+  transform: scale(1.04);
+}
+
+.photo-tall img {
+  height: 420px;
+  object-fit: cover;
+}
+
+.photo-wide img {
+  height: 260px;
+  object-fit: cover;
+}
+
+/* Closing signature */
+
+.gallery-footer {
+  margin-top: 55px;
+}
+
+.gallery-footer span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 19px;
+  font-style: italic;
+  color: #777;
+}
+
+.gallery-footer h3 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  font-weight: normal;
+  color: hsl(0, 0%, 100%);
+  margin-top: 5px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+  .wedding-photo-gallery {
+    columns: 2;
+    column-gap: 12px;
+  }
+
+  .gallery-photo {
+    margin-bottom: 12px;
+  }
+
+  .photo-tall img {
+    height: 280px;
+  }
+
+  .photo-wide img {
+    height: 190px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 43px;
+  }
+}
+
+@media (max-width: 420px) {
+  .wedding-photo-gallery {
+    columns: 2;
+  }
+
+  .photo-tall img {
+    height: 220px;
+  }
+}
