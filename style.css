@@ -12,6 +12,9 @@
     --merlot-light: #713747;
     --champagne: #c6b8a5;
     --grey: #77716e;
+    --espresso: #371e00;
+    --plum: #4c1737;
+    --olive: #333b00;
 
     --heading-font: 'Cormorant Garamond', serif;
     --script-font: 'Great Vibes', cursive;
@@ -373,11 +376,19 @@ textarea {
     background: var(--merlot);
     color: var(--white);
     text-align: center;
+    align-items: center;
 }
 
 .celebration-content {
     max-width: 550px;
     margin: auto;
+}
+
+.celebration-content img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .celebration-content .eyebrow {
@@ -424,6 +435,18 @@ textarea {
     background: var(--ivory);
 }
 
+.swatch.olive {
+    background: var(--olive);
+}
+
+.swatch.espresso {
+    background: var(--espresso);
+}
+
+.swatch.plum {
+    background: var(--plum);
+}
+
 .swatch.grey {
     background: var(--grey);
 }
@@ -433,7 +456,7 @@ textarea {
 }
 
 .swatch.merlot {
-    background: #541b2b;
+    background: var(--merlot);
 }
 
 .dress-code-note {
